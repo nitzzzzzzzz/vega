@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Vega-Lite Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: left;  
+            margin-left: 10px; 
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #vis {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vega-Lite HW Visualization</h1>
+
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+        var vegaSpec = "https://raw.githubusercontent.com/nitzzzzzzzz/vega/refs/heads/main/hw_9.json";
+
+        vegaEmbed('#vis', vegaSpec, { "actions": false }).catch(console.error);
+    </script>
+
+</body>
+
+</html>
